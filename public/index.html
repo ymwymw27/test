@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101b3c" />
+    <meta name="description" content="A practical web design system with foundations, components, layout rules, and usage guidance." />
+    <title>Stripe Web Design System</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <a class="brand" href="#top" aria-label="Stripe Web Design System home">
+        <span class="brand-mark">S</span>
+        <span><strong>stripe</strong><small>WEB SYSTEM</small></span>
+      </a>
+      <div class="sidebar-label">DOCUMENTATION</div>
+      <nav class="side-nav" aria-label="Documentation">
+        <a class="active" href="#foundations">Foundations</a>
+        <a href="#colors">Color</a>
+        <a href="#typography">Typography</a>
+        <a href="#spacing">Spacing & shape</a>
+        <a href="#responsive">Responsive & motion</a>
+        <a href="#components">Components</a>
+        <a href="#buttons">Buttons</a>
+        <a href="#forms">Forms</a>
+        <a href="#cards">Project cards</a>
+        <a href="#layout">Layout & usage</a>
+        <a href="#policy">Use policy</a>
+      </nav>
+      <div class="sidebar-foot">
+        <span class="status-dot"></span>
+        <span>Web system <strong>v1.0</strong></span>
+      </div>
+    </aside>
+
+    <main class="main" id="top">
+      <header class="topbar">
+        <div class="breadcrumb">Design systems <span>/</span> Stripe Web</div>
+        <div class="topbar-actions">
+          <span class="version">Version 1.0</span>
+          <a class="figma-link" href="https://www.figma.com/design/HswACHFNNd6B34ysa6vPPy/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C?node-id=15-2" target="_blank" rel="noreferrer">Open in Figma <span aria-hidden="true">&#8599;</span></a>
+        </div>
+      </header>
+
+      <div class="content">
+        <section class="page-intro" id="foundations">
+          <p class="eyebrow">STRIPE / WEB <span>FOUNDATIONS & COMPONENTS</span></p>
+          <h1>Website Design System</h1>
+          <p class="lede">A practical visual language for clear, confident financial experiences. Built from the source page and extended for real product work.</p>
+          <div class="intro-meta"><span>Source: <code>index.html</code> + <code>style.css</code></span><span>Updated November 2026</span></div>
+        </section>
+
+        <section class="doc-section" id="colors">
+          <div class="section-heading">
+            <div><p class="eyebrow">01 / FOUNDATIONS</p><h2>Color tokens</h2></div>
+            <p>Use semantic roles in components. Raw values stay in the primitive palette.</p>
+          </div>
+          <div class="swatch-grid">
+            <article class="swatch"><div class="swatch-color color-canvas"></div><div class="swatch-info"><strong>Canvas</strong><code>--white</code><span>Surface / base</span></div></article>
+            <article class="swatch"><div class="swatch-color color-primary"></div><div class="swatch-info"><strong>Primary</strong><code>--primary</code><span>Brand / action</span></div></article>
+            <article class="swatch"><div class="swatch-color color-primary-hover"></div><div class="swatch-info"><strong>Primary hover</strong><code>--primary-deep</code><span>Action / hover</span></div></article>
+            <article class="swatch"><div class="swatch-color color-heading"></div><div class="swatch-info"><strong>Heading</strong><code>--heading</code><span>Text / emphasis</span></div></article>
+            <article class="swatch"><div class="swatch-color color-secondary"></div><div class="swatch-info"><strong>Secondary text</strong><code>--muted</code><span>Text / supporting</span></div></article>
+            <article class="swatch"><div class="swatch-color color-border"></div><div class="swatch-info"><strong>Border</strong><code>--line</code><span>Border / default</span></div></article>
+            <article class="swatch"><div class="swatch-color color-error"></div><div class="swatch-info"><strong>Error</strong><code>--feedback-error</code><span>Feedback / error</span></div></article>
+            <article class="swatch"><div class="swatch-color color-success"></div><div class="swatch-info"><strong>Success</strong><code>--feedback-success</code><span>Feedback / success</span></div></article>
+          </div>
+          <div class="token-note"><strong>Color rule</strong><span>Use semantic and component tokens in product UI. Reserve the multicolor gradient for meaningful brand artwork, not repeated decoration.</span></div>
+        </section>
+
+        <section class="doc-section" id="typography">
+          <div class="section-heading">
+            <div><p class="eyebrow">02 / FOUNDATIONS</p><h2>Typography</h2></div>
+            <p>Source stack: Helvetica Neue, Helvetica, Arial, sans-serif.</p>
+          </div>
+          <div class="type-list">
+            <div class="type-row"><span class="type-role">Display / Hero</span><span class="type-sample type-hero">Financial infrastructure</span><span class="type-spec">44 / 55 px<br />Regular</span></div>
+            <div class="type-row"><span class="type-role">Heading / Section</span><span class="type-sample type-section">Flexible solutions</span><span class="type-spec">30 / 36 px<br />Regular</span></div>
+            <div class="type-row"><span class="type-role">Body / Default</span><span class="type-sample type-body">Designed for clarity and long-form reading.</span><span class="type-spec">16 / 24 px<br />Regular</span></div>
+            <div class="type-row"><span class="type-role">Body / Small</span><span class="type-sample type-small">Secondary details and supporting descriptions.</span><span class="type-spec">14 / 20 px<br />Regular</span></div>
+            <div class="type-row"><span class="type-role">Label / Default</span><span class="type-sample type-label">Global GDP running on Stripe</span><span class="type-spec">12 / 16 px<br />Medium</span></div>
+            <div class="type-row"><span class="type-role">Button / Label</span><span class="type-sample type-button">Get started</span><span class="type-spec">14 / 20 px<br />Semi bold</span></div>
+          </div>
+          <p class="small-note">Typography specimens in the Figma file use Inter because Helvetica Neue is not available in that canvas. Keep the source CSS stack in implementation.</p>
+        </section>
+
+        <section class="doc-section" id="spacing">
+          <div class="section-heading">
+            <div><p class="eyebrow">03 / FOUNDATIONS</p><h2>Spacing & shape</h2></div>
+            <p>A 4 px base scale; compose in 8 px increments for common layouts.</p>
+          </div>
+          <div class="two-column">
+            <div class="spec-panel">
+              <h3>Spacing scale</h3>
+              <div class="space-list">
+                <div class="space-row"><span>space/1</span><span class="space-bar w4"></span><code>4 px</code></div>
+                <div class="space-row"><span>space/2</span><span class="space-bar w8"></span><code>8 px</code></div>
+                <div class="space-row"><span>space/3</span><span class="space-bar w12"></span><code>12 px</code></div>
+                <div class="space-row"><span>space/4</span><span class="space-bar w16"></span><code>16 px</code></div>
+                <div class="space-row"><span>space/6</span><span class="space-bar w24"></span><code>24 px</code></div>
+                <div class="space-row"><span>space/8</span><span class="space-bar w32"></span><code>32 px</code></div>
+                <div class="space-row"><span>space/12</span><span class="space-bar w48"></span><code>48 px</code></div>
+                <div class="space-row"><span>space/16</span><span class="space-bar w64"></span><code>64 px</code></div>
+              </div>
+            </div>
+            <div class="spec-panel">
+              <h3>Corner radius</h3>
+              <p class="small-note">Default interactive radius is 3 px. Keep cards at 8 px or less.</p>
+              <div class="radius-list">
+                <div><span class="radius-sample r0"></span><small>none</small></div>
+                <div><span class="radius-sample r2"></span><small>xs / 2</small></div>
+                <div><span class="radius-sample r3"></span><small>sm / 3</small></div>
+                <div><span class="radius-sample r4"></span><small>md / 4</small></div>
+                <div><span class="radius-sample r8"></span><small>lg / 8</small></div>
+                <div><span class="radius-sample rpill"></span><small>full</small></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="doc-section" id="responsive">
+          <div class="section-heading"><div><p class="eyebrow">04 / FOUNDATIONS</p><h2>Responsive & motion</h2></div><p>Keep navigation, content, and controls usable at every supported width.</p></div>
+          <div class="two-column">
+            <div class="spec-panel"><h3>Breakpoints & grid</h3><div class="rule-row"><strong>Desktop</strong><span>&ge; 1100 px / 12 columns / 24 px gutter / 1264 px max content</span></div><div class="rule-row"><strong>Tablet</strong><span>760-1099 px / 8 columns / reduce navigation density</span></div><div class="rule-row"><strong>Mobile</strong><span>320-759 px / 4 columns / 16 px inset / stack actions</span></div></div>
+            <div class="spec-panel"><h3>Motion & accessibility</h3><div class="motion-scale"><span>Fast <strong>120 ms</strong></span><span>Standard <strong>200 ms</strong></span><span>Enter <strong>280 ms</strong></span></div><p>Use <code>cubic-bezier(0.2, 0, 0, 1)</code>. Respect <code>prefers-reduced-motion</code>; remove non-essential movement while preserving immediate focus, pressed, and error feedback.</p><p>Motion clarifies state changes only. Do not animate layout dimensions or rely on color alone to communicate status.</p></div>
+          </div>
+        </section>
+
+        <section class="doc-section" id="components">
+          <div class="section-heading"><div><p class="eyebrow">05 / COMPONENTS</p><h2>Component library</h2></div><p>Variants use semantic tokens and expose content as editable properties.</p></div>
+          <div class="component-section" id="buttons"><div class="component-heading"><div><h3>Buttons</h3><p>Primary advances the main task; Secondary offers an alternative; Utility supports low-emphasis actions.</p></div><span class="component-meta">3 intents / 3 sizes / 4 states</span></div>
+            <div class="button-row"><span class="state-label">Primary</span><button class="btn primary small" type="button">Small action</button><button class="btn primary" type="button">Get started <span aria-hidden="true">&#8594;</span></button><button class="btn primary large" type="button">Large action</button><button class="btn primary" type="button" disabled>Disabled</button></div>
+            <div class="button-row"><span class="state-label">Secondary</span><button class="btn secondary small" type="button">Small action</button><button class="btn secondary" type="button">Preview</button><button class="btn secondary large" type="button">Large action</button><button class="btn secondary" type="button" disabled>Disabled</button></div>
+            <div class="button-row"><span class="state-label">Utility</span><button class="btn utility small" type="button">Small action</button><button class="btn utility" type="button">Manage</button><button class="btn utility large" type="button">Large action</button><button class="btn utility" type="button" disabled>Disabled</button></div>
+            <div class="token-note"><strong>Interaction states</strong><span>Default, hover, focused, and disabled. Focus is visible; disabled controls are not distinguished by color alone.</span></div>
+          </div>
+
+          <div class="component-section" id="forms"><div class="component-heading"><div><h3>Forms</h3><p>Labels persist above controls; helper and error copy stays adjacent.</p></div><span class="component-meta">Text Field / Text Area</span></div>
+            <div class="form-grid">
+              <div class="field"><label for="email">Business email <span class="required">*</span></label><input id="email" type="email" placeholder="name@company.com" /><small>Used for account updates.</small></div>
+              <div class="field is-focused"><label for="focused">Focused field</label><input id="focused" type="text" value="Stripe, Inc." /><small>Focus border and ring are visible.</small></div>
+              <div class="field is-error"><label for="error">Company website <span class="required">*</span></label><input id="error" type="url" value="stripe" aria-invalid="true" aria-describedby="error-help" /><small id="error-help">Enter a valid website URL.</small></div>
+              <div class="field is-disabled"><label for="disabled">Account ID</label><input id="disabled" type="text" value="acct_1234" disabled /><small>This field is currently unavailable.</small></div>
+              <div class="field field-wide"><label for="summary">Project summary <span class="required">*</span></label><textarea id="summary" rows="4" placeholder="Describe the goals, audience, and expected outcome."></textarea><small>Keep it concise and specific.</small></div>
+            </div>
+          </div>
+
+          <div class="component-section" id="cards"><div class="component-heading"><div><h3>Project cards</h3><p>Use in responsive grids; cards fill their parent track rather than enforcing a fixed page width.</p></div><span class="component-meta">Standard / Featured / Hover</span></div>
+            <div class="project-grid">
+              <article class="project-card"><p class="card-category">CUSTOMER STORY</p><h4>Revenue operations, simplified</h4><p>Connect payments, reporting, and customer insights in one dependable workflow.</p><div class="card-footer"><span>B2B SAAS / 8 MIN READ</span><a href="#layout">View project <span aria-hidden="true">&#8594;</span></a></div></article>
+              <article class="project-card featured"><p class="card-category">FEATURED PROJECT</p><h4>A faster path to recurring revenue</h4><p>A clear summary with a strong outcome, useful metadata, and one next step.</p><div class="card-footer"><span>PLATFORM / CASE STUDY</span><a href="#layout">View project <span aria-hidden="true">&#8594;</span></a></div></article>
+            </div>
+            <div class="card-spec"><strong>Card spec</strong><span>320 px reference width / fill parent track / 24 px padding / max 8 px radius / optional 16:9 media / title up to 2 lines / summary up to 3 lines / optional metadata / one next action.</span></div>
+          </div>
+        </section>
+
+        <section class="doc-section" id="layout">
+          <div class="section-heading"><div><p class="eyebrow">06 / LAYOUT & USAGE</p><h2>Layout rules</h2></div><p>A consistent grid and content rhythm keeps product pages clear and scannable.</p></div>
+          <div class="grid-specs">
+            <div class="grid-spec"><div class="grid-demo desktop-grid" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><strong>Desktop / 12 columns</strong><span>24 px gutters / 1264 px max content</span></div>
+            <div class="grid-spec"><div class="grid-demo tablet-grid" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><strong>Tablet / 8 columns</strong><span>16 px gutters / 32 px page inset</span></div>
+            <div class="grid-spec"><div class="grid-demo mobile-grid" aria-hidden="true"><i></i><i></i><i></i><i></i></div><strong>Mobile / 4 columns</strong><span>16 px gutters / 16 px page inset</span></div>
+          </div>
+          <div class="principles-grid"><article><span>01</span><h3>Confident clarity</h3><p>Use direct language, visible hierarchy, and specific outcomes. Avoid vague financial claims or unexplained jargon.</p></article><article><span>02</span><h3>Focused action</h3><p>One primary action per region. Indigo is reserved for the main action; alternatives stay quieter.</p></article><article><span>03</span><h3>Color with purpose</h3><p>Use coral sparingly. Keep primary content unframed; avoid nested cards and decorative panels.</p></article></div>
+        </section>
+
+        <section class="doc-section policy-section" id="policy">
+          <div class="section-heading"><div><p class="eyebrow">07 / GOVERNANCE</p><h2>Use & contribution policy</h2></div><p>Review these checks before adding a token or handing off a component.</p></div>
+          <div class="policy-list"><div><strong>Token use</strong><p>Prefer semantic and component variables over hard-coded color, spacing, and radius values. Propose a token before adding a recurring one-off value.</p></div><div><strong>Accessibility</strong><p>Maintain WCAG AA contrast, visible keyboard focus, logical heading order, and status cues that pair color with text or icon.</p></div><div><strong>Responsive QA</strong><p>Verify reflow at 1100 px and 760 px, test component states, confirm labels and error copy, and check all values resolve to named tokens.</p></div></div>
+        </section>
+
+        <footer class="footer"><a href="#top">Stripe / Web Design System</a><span>Foundations, components, and usage rules</span><a href="https://www.figma.com/design/HswACHFNNd6B34ysa6vPPy/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C?node-id=15-2" target="_blank" rel="noreferrer">Figma source &#8599;</a></footer>
+      </div>
+    </main>
+  </body>
+</html>
